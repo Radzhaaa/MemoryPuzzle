@@ -5,69 +5,9 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="b30a62db-5299-45c0-a676-f0310a4b1c61" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/example/memorypuzzle/MemoryCard.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/example/memorypuzzle/MemoryGameController.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/com/example/memorypuzzle/images/10_of_clubs.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/com/example/memorypuzzle/images/10_of_diamonds.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/com/example/memorypuzzle/images/10_of_hearts.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/com/example/memorypuzzle/images/10_of_spades.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/com/example/memorypuzzle/images/2_of_clubs.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/com/example/memorypuzzle/images/2_of_diamonds.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/com/example/memorypuzzle/images/2_of_hearts.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/com/example/memorypuzzle/images/2_of_spades.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/com/example/memorypuzzle/images/3_of_clubs.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/com/example/memorypuzzle/images/3_of_diamonds.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/com/example/memorypuzzle/images/3_of_hearts.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/com/example/memorypuzzle/images/3_of_spades.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/com/example/memorypuzzle/images/4_of_clubs.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/com/example/memorypuzzle/images/4_of_diamonds.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/com/example/memorypuzzle/images/4_of_hearts.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/com/example/memorypuzzle/images/4_of_spades.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/com/example/memorypuzzle/images/5_of_clubs.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/com/example/memorypuzzle/images/5_of_diamonds.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/com/example/memorypuzzle/images/5_of_hearts.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/com/example/memorypuzzle/images/5_of_spades.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/com/example/memorypuzzle/images/6_of_clubs.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/com/example/memorypuzzle/images/6_of_diamonds.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/com/example/memorypuzzle/images/6_of_hearts.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/com/example/memorypuzzle/images/6_of_spades.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/com/example/memorypuzzle/images/7_of_clubs.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/com/example/memorypuzzle/images/7_of_diamonds.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/com/example/memorypuzzle/images/7_of_hearts.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/com/example/memorypuzzle/images/7_of_spades.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/com/example/memorypuzzle/images/8_of_clubs.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/com/example/memorypuzzle/images/8_of_diamonds.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/com/example/memorypuzzle/images/8_of_hearts.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/com/example/memorypuzzle/images/8_of_spades.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/com/example/memorypuzzle/images/9_of_clubs.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/com/example/memorypuzzle/images/9_of_diamonds.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/com/example/memorypuzzle/images/9_of_hearts.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/com/example/memorypuzzle/images/9_of_spades.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/com/example/memorypuzzle/images/ace_of_clubs.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/com/example/memorypuzzle/images/ace_of_diamonds.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/com/example/memorypuzzle/images/ace_of_hearts.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/com/example/memorypuzzle/images/ace_of_spades.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/com/example/memorypuzzle/images/back_of_card.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/com/example/memorypuzzle/images/black_joker.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/com/example/memorypuzzle/images/jack_of_clubs.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/com/example/memorypuzzle/images/jack_of_diamonds.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/com/example/memorypuzzle/images/jack_of_hearts.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/com/example/memorypuzzle/images/jack_of_spades.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/com/example/memorypuzzle/images/king_of_clubs.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/com/example/memorypuzzle/images/king_of_diamonds.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/com/example/memorypuzzle/images/king_of_hearts.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/com/example/memorypuzzle/images/king_of_spades.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/com/example/memorypuzzle/images/queen_of_clubs.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/com/example/memorypuzzle/images/queen_of_diamonds.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/com/example/memorypuzzle/images/queen_of_hearts.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/com/example/memorypuzzle/images/queen_of_spades.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/com/example/memorypuzzle/images/red_joker.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/com/example/memorypuzzle/memory-game.fxml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/com/example/memorypuzzle/style.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/Game.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/memorypuzzle/Game.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/Server.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/memorypuzzle/HelloApplication.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/memorypuzzle/HelloApplication.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/memorypuzzle/HelloController.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/com/example/memorypuzzle/hello-view.fxml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/com/example/memorypuzzle/images/red_joker.png" beforeDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -137,7 +77,7 @@
       <option name="presentableId" value="Default" />
       <updated>1701537151119</updated>
       <workItem from="1701537152122" duration="1054000" />
-      <workItem from="1701780694301" duration="9606000" />
+      <workItem from="1701780694301" duration="9946000" />
     </task>
     <task id="LOCAL-00001" summary="added Card and Desk of Card">
       <option name="closed" value="true" />
@@ -147,7 +87,15 @@
       <option name="project" value="LOCAL" />
       <updated>1701784885001</updated>
     </task>
-    <option name="localTasksCounter" value="2" />
+    <task id="LOCAL-00002" summary="added visual object to the view">
+      <option name="closed" value="true" />
+      <created>1701800608211</created>
+      <option name="number" value="00002" />
+      <option name="presentableId" value="LOCAL-00002" />
+      <option name="project" value="LOCAL" />
+      <updated>1701800608211</updated>
+    </task>
+    <option name="localTasksCounter" value="3" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -156,6 +104,7 @@
   <component name="VcsManagerConfiguration">
     <option name="ADD_EXTERNAL_FILES_SILENTLY" value="true" />
     <MESSAGE value="added Card and Desk of Card" />
-    <option name="LAST_COMMIT_MESSAGE" value="added Card and Desk of Card" />
+    <MESSAGE value="added visual object to the view" />
+    <option name="LAST_COMMIT_MESSAGE" value="added visual object to the view" />
   </component>
 </project>
