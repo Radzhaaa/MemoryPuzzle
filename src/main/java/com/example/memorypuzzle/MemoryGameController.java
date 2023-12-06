@@ -43,6 +43,7 @@ public class MemoryGameController implements Initializable {
             cardsInGame.add(new MemoryCard(cardDealt.getSuit(),cardDealt.getFaceName()));
         }
         Collections.shuffle(cardsInGame);
+        flipAllCards();
     }
 
     @Override
@@ -66,7 +67,7 @@ public class MemoryGameController implements Initializable {
     private void flipAllCards(){
         for(int i =0; i < cardsInGame.size();i++){
             ImageView imageView = (ImageView) imagesFlowPane.getChildren().get(i);
-            MemoryCard card = cardsInGame.get(i)
+            MemoryCard card = cardsInGame.get(i);
             if(card.isMatched()){
                 imageView.setImage(card.getImage());
             }else{
@@ -77,7 +78,7 @@ public class MemoryGameController implements Initializable {
 
     private void flipCard(int indexOfCard){
         if (card1 == null && card2 == null){
-            flipAllCards()
+            flipAllCards();
         }
         ImageView imageView = (ImageView) imagesFlowPane.getChildren().get(indexOfCard);
         if(card1 == null){
