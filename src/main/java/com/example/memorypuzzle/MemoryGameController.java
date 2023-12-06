@@ -9,6 +9,8 @@ import javafx.scene.image.ImageView;
 import javafx.scene.layout.FlowPane;
 
 import java.net.URL;
+import java.util.ArrayList;
+import java.util.Collections;
 import java.util.ResourceBundle;
 
 public class MemoryGameController implements Initializable {
@@ -22,25 +24,89 @@ public class MemoryGameController implements Initializable {
     @FXML
     private FlowPane imagesFlowPane;
 
-    @FXML
-    void playAgain(ActionEvent event) {
+    private ArrayList<MemoryCard> cardsInGame;
+    private MemoryCard card1,card2;
+    private int numOfGuesses;
+    private int numOfMatches;
 
+    @FXML
+    void playAgain() {
+        card1 = null;
+        card2 = null;
+        DeckOfCards deck = new DeckOfCards();
+        deck.shuffle();
+        cardsInGame = new ArrayList<>();
+
+        for (int i = 0; i < imagesFlowPane.getChildren().size() / 2; i++) {
+            Card cardDealt = deck.dealTopCard();
+            cardsInGame.add(new MemoryCard(cardDealt.getSuit(),cardDealt.getFaceName()));
+            cardsInGame.add(new MemoryCard(cardDealt.getSuit(),cardDealt.getFaceName()));
+        }
+        Collections.shuffle(cardsInGame);
     }
 
     @Override
     public void initialize(URL url, ResourceBundle resourceBundle) {
-       initializeImageView();
+        initializeImageView();
+        playAgain();
     }
 
-    private void initializeImageView(){
-        for(int i = 0; i < imagesFlowPane.getChildren().size();i++){
+    private void initializeImageView() {
+        for (int i = 0; i < imagesFlowPane.getChildren().size(); i++) {
             ImageView imageView = (ImageView) imagesFlowPane.getChildren().get(i);
             imageView.setImage(new Image(Card.class.getResourceAsStream("images/back_of_card.png")));
             imageView.setUserData(i);
 
             imageView.setOnMouseClicked(mouseEvent -> {
-                System.out.println(imageView.getUserData());
+                flipCard((int)imageView.getUserData());
             });
         }
+    }
+
+    private void flipAllCards(){
+        for(int i =0; i < cardsInGame.size();i++){
+            ImageView imageView = (ImageView) imagesFlowPane.getChildren().get(i);
+            MemoryCard card = cardsInGame.get(i)
+            if(card.isMatched()){
+                imageView.setImage(card.getImage());
+            }else{
+                imageView.setImage(card.getBackOfCardImage());
+            }
+        }
+    }
+
+    private void flipCard(int indexOfCard){
+        if (card1 == null && card2 == null){
+            flipAllCards()
+        }
+        ImageView imageView = (ImageView) imagesFlowPane.getChildren().get(indexOfCard);
+        if(card1 == null){
+            card1 = cardsInGame.get(indexOfCard);
+            imageView.setImage(card1.getImage());
+        }
+        else if (card2 == null){
+            numOfGuesses++;
+            card2 = cardsInGame.get(indexOfCard);
+            imageView.setImage(card2.getImage());
+            checkForMatch();
+            updateLabels();
+        }
+
+    }
+
+    private void updateLabels(){
+        correctLabel.setText(Integer.toString(numOfMatches));
+        guessesLabel.setText(Integer.toString(numOfGuesses));
+
+    }
+
+    private void checkForMatch(){
+        if (card1.isSameCard(card2)){
+            numOfMatches++;
+            card1.setMatched(true);
+            card2.setMatched(true);
+        }
+        card1 = null;
+        card2 = null;
     }
 }
