@@ -203,8 +203,8 @@
                 </rowConstraints>
                 <Label contentDisplay="CENTER" text="Guesses:" GridPane.rowIndex="1" />
                 <Label prefWidth="130.0" text="Correct:" GridPane.rowIndex="2" />
-                <Label fx:id="guessesLabelOne" text="0" GridPane.columnIndex="1" GridPane.rowIndex="1" />
-                <Label fx:id="correctLabelOne" text="0" GridPane.columnIndex="1" GridPane.rowIndex="2" />
+                <Label fx:id="guessesLabel1" text="0" GridPane.columnIndex="1" GridPane.rowIndex="1" />
+                <Label fx:id="correctLabel1" text="0" GridPane.columnIndex="1" GridPane.rowIndex="2" />
             <Label text="Player 1" />
             </GridPane>
             <Button fx:id="playButton" mnemonicParsing="false" onAction="#playAgain" prefHeight="60.0" prefWidth="347.0" text="Play Again" />
@@ -221,8 +221,8 @@
             <children>
                <Label contentDisplay="CENTER" text="Guesses:" GridPane.rowIndex="1" />
                <Label prefWidth="130.0" text="Correct:" GridPane.rowIndex="2" />
-               <Label fx:id="guessesLabelTwo" text="0" GridPane.columnIndex="1" GridPane.rowIndex="1" />
-               <Label fx:id="correctLabelTwo" text="0" GridPane.columnIndex="1" GridPane.rowIndex="2" />
+               <Label fx:id="guessesLabel2" text="0" GridPane.columnIndex="1" GridPane.rowIndex="1" />
+               <Label fx:id="correctLabel2" text="0" GridPane.columnIndex="1" GridPane.rowIndex="2" />
                <Label text="Player 2" />
             </children>
          </GridPane>
