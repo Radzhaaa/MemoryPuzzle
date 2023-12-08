@@ -5,17 +5,19 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="b30a62db-5299-45c0-a676-f0310a4b1c61" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/example/memorypuzzle/IntegerStringConverter.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/example/memorypuzzle/MenuController.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/example/memorypuzzle/SettingsController.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/com/example/memorypuzzle/Menu.fxml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/com/example/memorypuzzle/Settings.fxml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/com/example/memorypuzzle/images/Settings.fxml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/com/example/memorypuzzle/images/TwoPlayer.fxml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/example/memorypuzzle/ConnectToRoomController.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/example/memorypuzzle/CreateRoomController.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/example/memorypuzzle/MemoryGameTwoPlayerController.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/example/memorypuzzle/RoomController.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/com/example/memorypuzzle/ConnectToRoom.fxml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/com/example/memorypuzzle/CreateRoom.fxml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/com/example/memorypuzzle/Room.fxml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/com/example/memorypuzzle/memory-game-two-player.fxml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/memorypuzzle/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/memorypuzzle/Main.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/com/example/memorypuzzle/MemoryGameController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/memorypuzzle/MemoryGameController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/memorypuzzle/MenuController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/memorypuzzle/MenuController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/memorypuzzle/SettingsController.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/com/example/memorypuzzle/Settings.fxml" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/resources/com/example/memorypuzzle/memory-game.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/com/example/memorypuzzle/memory-game.fxml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -27,8 +29,8 @@
     <option name="RECENT_TEMPLATES">
       <list>
         <option value="CSS File" />
-        <option value="FxmlFile" />
         <option value="AnnotationType" />
+        <option value="FxmlFile" />
         <option value="Class" />
       </list>
     </option>
@@ -118,7 +120,11 @@
       <workItem from="1701974533486" duration="401000" />
       <workItem from="1701976395259" duration="190000" />
       <workItem from="1701976599344" duration="127000" />
-      <workItem from="1701977494370" duration="8173000" />
+      <workItem from="1701977494370" duration="9119000" />
+      <workItem from="1702034840538" duration="839000" />
+      <workItem from="1702035704663" duration="362000" />
+      <workItem from="1702036342312" duration="229000" />
+      <workItem from="1702036607219" duration="878000" />
     </task>
     <task id="LOCAL-00001" summary="added Card and Desk of Card">
       <option name="closed" value="true" />
@@ -168,7 +174,15 @@
       <option name="project" value="LOCAL" />
       <updated>1701870248153</updated>
     </task>
-    <option name="localTasksCounter" value="7" />
+    <task id="LOCAL-00007" summary="added the ability to switch between views">
+      <option name="closed" value="true" />
+      <created>1702033891335</created>
+      <option name="number" value="00007" />
+      <option name="presentableId" value="LOCAL-00007" />
+      <option name="project" value="LOCAL" />
+      <updated>1702033891335</updated>
+    </task>
+    <option name="localTasksCounter" value="8" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -181,7 +195,8 @@
     <MESSAGE value="Updated the controller to access the ImageView objects in the view" />
     <MESSAGE value="added game logic" />
     <MESSAGE value="added changes" />
-    <option name="LAST_COMMIT_MESSAGE" value="added changes" />
+    <MESSAGE value="added the ability to switch between views" />
+    <option name="LAST_COMMIT_MESSAGE" value="added the ability to switch between views" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>

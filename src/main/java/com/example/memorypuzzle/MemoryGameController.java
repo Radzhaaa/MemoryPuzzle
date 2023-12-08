@@ -41,7 +41,7 @@ public class MemoryGameController implements Initializable {
 
     @FXML
     void BackView(ActionEvent event) throws IOException {
-        Parent root = FXMLLoader.load(getClass().getResource("Settings.fxml"));
+        Parent root = FXMLLoader.load(getClass().getResource("Menu.fxml"));
         Stage stage = (Stage) ((Node) event.getSource()).getScene().getWindow();
         Scene scene = new Scene(root);
         stage.setScene(scene);

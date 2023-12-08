@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.VBox?>
+
+<AnchorPane prefHeight="400.0" prefWidth="600.0" stylesheets="@style.css" xmlns="http://javafx.com/javafx/21" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.memorypuzzle.RoomController">
+   <children>
+      <VBox alignment="TOP_CENTER" layoutX="167.0" layoutY="23.0" spacing="50.0">
+         <children>
+            <Label text="Memory Puzzle" />
+            <Button fx:id="connectRoomButton" mnemonicParsing="false" onAction="#ConnectRoom" text="Connect to room" />
+            <Button fx:id="createRoomButton" mnemonicParsing="false" onAction="#createRoom" prefHeight="60.0" prefWidth="261.0" text="Create room" />
+         </children>
+      </VBox>
+      <Button fx:id="backButton" layoutX="24.0" layoutY="24.0" mnemonicParsing="false" onAction="#BackView" prefHeight="13.0" prefWidth="70.0" style="-fx-background-color: black; -fx-background-radius: 5px; -fx-font-size: 15px;" text="back" textFill="WHITE">
+         <padding>
+            <Insets bottom="2.0" left="2.0" right="2.0" top="2.0" />
+         </padding>
+      </Button>
+   </children>
+</AnchorPane>
