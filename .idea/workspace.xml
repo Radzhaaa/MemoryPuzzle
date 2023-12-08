@@ -5,7 +5,16 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="b30a62db-5299-45c0-a676-f0310a4b1c61" name="Changes" comment="">
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/example/memorypuzzle/IntegerStringConverter.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/example/memorypuzzle/MenuController.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/example/memorypuzzle/SettingsController.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/com/example/memorypuzzle/Menu.fxml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/com/example/memorypuzzle/Settings.fxml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/com/example/memorypuzzle/images/Settings.fxml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/com/example/memorypuzzle/images/TwoPlayer.fxml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/memorypuzzle/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/memorypuzzle/Main.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/com/example/memorypuzzle/MemoryGameController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/memorypuzzle/MemoryGameController.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/resources/com/example/memorypuzzle/memory-game.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/com/example/memorypuzzle/memory-game.fxml" afterDir="false" />
     </list>
@@ -17,9 +26,10 @@
   <component name="FileTemplateManagerImpl">
     <option name="RECENT_TEMPLATES">
       <list>
-        <option value="FxmlFile" />
-        <option value="Class" />
         <option value="CSS File" />
+        <option value="FxmlFile" />
+        <option value="AnnotationType" />
+        <option value="Class" />
       </list>
     </option>
   </component>
@@ -44,25 +54,28 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent"><![CDATA[{
-  "keyToString": {
-    "ASKED_ADD_EXTERNAL_FILES": "true",
-    "ASKED_SHARE_PROJECT_CONFIGURATION_FILES": "true",
-    "RunOnceActivity.OpenProjectViewOnStart": "true",
-    "RunOnceActivity.ShowReadmeOnStart": "true",
-    "SHARE_PROJECT_CONFIGURATION_FILES": "true",
-    "WebServerToolWindowFactoryState": "false",
-    "git-widget-placeholder": "master",
-    "last_opened_file_path": "/Users/alinaradzhapbaeva/IdeaProjects/MemoryPuzzle/src/main/resources/com/example/memorypuzzle",
-    "list.type.of.created.stylesheet": "CSS",
-    "node.js.detected.package.eslint": "true",
-    "node.js.detected.package.tslint": "true",
-    "node.js.selected.package.eslint": "(autodetect)",
-    "node.js.selected.package.tslint": "(autodetect)",
-    "vue.rearranger.settings.migration": "true"
+  <component name="PropertiesComponent">{
+  &quot;keyToString&quot;: {
+    &quot;ASKED_ADD_EXTERNAL_FILES&quot;: &quot;true&quot;,
+    &quot;ASKED_SHARE_PROJECT_CONFIGURATION_FILES&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.OpenProjectViewOnStart&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
+    &quot;SHARE_PROJECT_CONFIGURATION_FILES&quot;: &quot;true&quot;,
+    &quot;WebServerToolWindowFactoryState&quot;: &quot;false&quot;,
+    &quot;git-widget-placeholder&quot;: &quot;master&quot;,
+    &quot;last_opened_file_path&quot;: &quot;/Users/alinaradzhapbaeva/IdeaProjects/MemoryPuzzle/src/main/resources/com/example/memorypuzzle&quot;,
+    &quot;list.type.of.created.stylesheet&quot;: &quot;CSS&quot;,
+    &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
+    &quot;node.js.detected.package.tslint&quot;: &quot;true&quot;,
+    &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
+    &quot;node.js.selected.package.tslint&quot;: &quot;(autodetect)&quot;,
+    &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;
   }
-}]]></component>
+}</component>
   <component name="RecentsManager">
+    <key name="CreateClassDialog.RecentsKey">
+      <recent name="com.example.memorypuzzle" />
+    </key>
     <key name="CopyFile.RECENT_KEYS">
       <recent name="$PROJECT_DIR$/src/main/resources/com/example/memorypuzzle" />
     </key>
@@ -99,7 +112,13 @@
       <option name="presentableId" value="Default" />
       <updated>1701537151119</updated>
       <workItem from="1701537152122" duration="1054000" />
-      <workItem from="1701780694301" duration="17569000" />
+      <workItem from="1701780694301" duration="19696000" />
+      <workItem from="1701972617292" duration="161000" />
+      <workItem from="1701973779239" duration="671000" />
+      <workItem from="1701974533486" duration="401000" />
+      <workItem from="1701976395259" duration="190000" />
+      <workItem from="1701976599344" duration="127000" />
+      <workItem from="1701977494370" duration="8173000" />
     </task>
     <task id="LOCAL-00001" summary="added Card and Desk of Card">
       <option name="closed" value="true" />
@@ -141,7 +160,15 @@
       <option name="project" value="LOCAL" />
       <updated>1701869349818</updated>
     </task>
-    <option name="localTasksCounter" value="6" />
+    <task id="LOCAL-00006" summary="added changes">
+      <option name="closed" value="true" />
+      <created>1701870248153</created>
+      <option name="number" value="00006" />
+      <option name="presentableId" value="LOCAL-00006" />
+      <option name="project" value="LOCAL" />
+      <updated>1701870248153</updated>
+    </task>
+    <option name="localTasksCounter" value="7" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -151,9 +178,19 @@
     <option name="ADD_EXTERNAL_FILES_SILENTLY" value="true" />
     <MESSAGE value="added Card and Desk of Card" />
     <MESSAGE value="added visual object to the view" />
-    <MESSAGE value="added changes" />
     <MESSAGE value="Updated the controller to access the ImageView objects in the view" />
     <MESSAGE value="added game logic" />
-    <option name="LAST_COMMIT_MESSAGE" value="added game logic" />
+    <MESSAGE value="added changes" />
+    <option name="LAST_COMMIT_MESSAGE" value="added changes" />
+  </component>
+  <component name="XDebuggerManager">
+    <breakpoint-manager>
+      <breakpoints>
+        <breakpoint enabled="true" type="java-exception">
+          <properties class="java.lang.NullPointerException" package="java.lang" />
+          <option name="timeStamp" value="3" />
+        </breakpoint>
+      </breakpoints>
+    </breakpoint-manager>
   </component>
 </project>
