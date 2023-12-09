@@ -125,6 +125,16 @@ public class MemoryGameTwoPlayerController implements Initializable {
         deck.shuffle();
         cardsInGame = new ArrayList<>();
 
+        numOfGuesses1 = 0;
+        numOfMatches1 = 0;
+        numOfGuesses2 = 0;
+        numOfMatches2 = 0;
+
+        correctLabel1.setText(Integer.toString(0));
+        guessesLabel1.setText(Integer.toString(0));
+        correctLabel2.setText(Integer.toString(0));
+        guessesLabel2.setText(Integer.toString(0));
+
         for (int i = 0; i < imagesFlowPane.getChildren().size() / 2; i++) {
             Card cardDealt = deck.dealTopCard();
             cardsInGame.add(new MemoryCard(cardDealt.getSuit(), cardDealt.getFaceName()));

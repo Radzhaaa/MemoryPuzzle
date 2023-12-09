@@ -4,7 +4,7 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="b30a62db-5299-45c0-a676-f0310a4b1c61" name="Changes" comment="added ability to create room">
+    <list default="true" id="b30a62db-5299-45c0-a676-f0310a4b1c61" name="Changes" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/com/example/memorypuzzle/MemoryGameTwoPlayerController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/memorypuzzle/MemoryGameTwoPlayerController.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/resources/com/example/memorypuzzle/memory-game-two-player.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/com/example/memorypuzzle/memory-game-two-player.fxml" afterDir="false" />
@@ -124,7 +124,7 @@
       <workItem from="1702057178799" duration="1011000" />
       <workItem from="1702058445455" duration="646000" />
       <workItem from="1702059438381" duration="388000" />
-      <workItem from="1702059841743" duration="2067000" />
+      <workItem from="1702059841743" duration="4842000" />
     </task>
     <task id="LOCAL-00001" summary="added Card and Desk of Card">
       <option name="closed" value="true" />
@@ -190,7 +190,15 @@
       <option name="project" value="LOCAL" />
       <updated>1702037839284</updated>
     </task>
-    <option name="localTasksCounter" value="9" />
+    <task id="LOCAL-00009" summary="gone game logic for two players">
+      <option name="closed" value="true" />
+      <created>1702065329168</created>
+      <option name="number" value="00009" />
+      <option name="presentableId" value="LOCAL-00009" />
+      <option name="project" value="LOCAL" />
+      <updated>1702065329168</updated>
+    </task>
+    <option name="localTasksCounter" value="10" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -216,7 +224,8 @@
     <MESSAGE value="added changes" />
     <MESSAGE value="added the ability to switch between views" />
     <MESSAGE value="added ability to create room" />
-    <option name="LAST_COMMIT_MESSAGE" value="added ability to create room" />
+    <MESSAGE value="gone game logic for two players" />
+    <option name="LAST_COMMIT_MESSAGE" value="gone game logic for two players" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
