@@ -57,6 +57,11 @@ public class MemoryGameController implements Initializable {
         deck.shuffle();
         cardsInGame = new ArrayList<>();
 
+        numOfGuesses = 0;
+        numOfMatches = 0;
+        correctLabel.setText(Integer.toString(0));
+        guessesLabel.setText(Integer.toString(0));
+
         for (int i = 0; i < imagesFlowPane.getChildren().size() / 2; i++) {
             Card cardDealt = deck.dealTopCard();
             cardsInGame.add(new MemoryCard(cardDealt.getSuit(), cardDealt.getFaceName()));
@@ -70,15 +75,6 @@ public class MemoryGameController implements Initializable {
     public void initialize(URL url, ResourceBundle resourceBundle) {
         initializeImageView();
         playAgain();
-//        if(numOfMatches == 18){
-//            Alert alert = new Alert(Alert.AlertType.INFORMATION);
-//
-//            alert.setTitle("Memory puzzle");
-//            alert.setHeaderText(null);
-//            alert.setContentText("The game is completed");
-//
-//            alert.showAndWait();
-//        }
     }
 
     private void initializeImageView() {
