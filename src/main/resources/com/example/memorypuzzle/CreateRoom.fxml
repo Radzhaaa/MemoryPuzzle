@@ -10,8 +10,8 @@
    <children>
       <VBox layoutX="220.0" layoutY="122.0">
          <children>
-            <Label prefHeight="0.0" prefWidth="160.0" text="Room code:" />
-            <Label fx:id="roomCode" alignment="TOP_CENTER" contentDisplay="CENTER" prefHeight="39.0" prefWidth="161.0" style="-fx-background-color: white;" text="Label" />
+            <Label prefHeight="37.0" prefWidth="176.0" text="Room name:" />
+            <Label fx:id="roomCode" alignment="TOP_CENTER" contentDisplay="CENTER" prefHeight="39.0" prefWidth="177.0" style="-fx-background-color: white;" text="Label" />
          </children>
       </VBox>
       <Button fx:id="createRoomButton" layoutX="194.0" layoutY="279.0" mnemonicParsing="false" onAction="#CreateRoom" text="CreateRoom" />

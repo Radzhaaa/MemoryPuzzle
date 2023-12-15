@@ -7,6 +7,7 @@ import javafx.fxml.Initializable;
 import javafx.scene.Node;
 import javafx.scene.Parent;
 import javafx.scene.Scene;
+import javafx.scene.control.Alert;
 import javafx.scene.control.Button;
 import javafx.scene.control.Label;
 import javafx.scene.image.Image;
@@ -69,6 +70,15 @@ public class MemoryGameController implements Initializable {
     public void initialize(URL url, ResourceBundle resourceBundle) {
         initializeImageView();
         playAgain();
+//        if(numOfMatches == 18){
+//            Alert alert = new Alert(Alert.AlertType.INFORMATION);
+//
+//            alert.setTitle("Memory puzzle");
+//            alert.setHeaderText(null);
+//            alert.setContentText("The game is completed");
+//
+//            alert.showAndWait();
+//        }
     }
 
     private void initializeImageView() {

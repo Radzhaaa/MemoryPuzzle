@@ -11,4 +11,6 @@ module com.example.memorypuzzle {
     opens com.example.memorypuzzle.Server to javafx.fxml;
     exports com.example.memorypuzzle.PClient;
     opens com.example.memorypuzzle.PClient to javafx.fxml;
+    exports com.example.memorypuzzle.SeverLogic;
+    opens com.example.memorypuzzle.SeverLogic to javafx.fxml;
 }
