@@ -92,6 +92,7 @@ public class MemoryGameTwoPlayerController implements Initializable {
                 imageView.setImage(card.getImage());
             } else {
                 imageView.setImage(card.getBackOfCardImage());
+                imageView.disableProperty().set(false);
             }
         }
     }
@@ -104,6 +105,7 @@ public class MemoryGameTwoPlayerController implements Initializable {
         if (card1 == null) {
             card1 = cardsInGame.get(indexOfCard);
             imageView.setImage(card1.getImage());
+            imageView.disableProperty().set(true);
         } else if (card2 == null) {
             if (whoIs == 1){
                 numOfGuesses1++;
@@ -154,7 +156,7 @@ public class MemoryGameTwoPlayerController implements Initializable {
     }
 
     private void checkForMatch() {
-        if (card1.isSameCard(card2) & (card1 != card2) ) {
+        if (card1.isSameCard(card2) & (card1 != card2) && (!card1.isMatched()) && (!card2.isMatched()))  {
             if (whoIs == 1){
                 numOfMatches1++;
             }else if(whoIs == 2){

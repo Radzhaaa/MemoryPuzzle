@@ -5,20 +5,15 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="b30a62db-5299-45c0-a676-f0310a4b1c61" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/example/memorypuzzle/Server/Client.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/example/memorypuzzle/Server/Server.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/example/memorypuzzle/SeverLogic/Client.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/example/memorypuzzle/SeverLogic/ClientHandler.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/example/memorypuzzle/SeverLogic/Room.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/example/memorypuzzle/SeverLogic/Server.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/example/memorypuzzle/SeverLogic/ServerHandlerClient.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/example/memorypuzzle/Room.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/example/memorypuzzle/RoomCreater.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/memorypuzzle/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/memorypuzzle/Main.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/memorypuzzle/MemoryGameController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/memorypuzzle/MemoryGameController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/memorypuzzle/Player.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/memorypuzzle/PClient/Player.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/module-info.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/module-info.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/memorypuzzle/ConnectToRoomController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/memorypuzzle/ConnectToRoomController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/memorypuzzle/CreateRoomController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/memorypuzzle/CreateRoomController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/memorypuzzle/MemoryGameTwoPlayerController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/memorypuzzle/MemoryGameTwoPlayerController.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/resources/com/example/memorypuzzle/ConnectToRoom.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/com/example/memorypuzzle/ConnectToRoom.fxml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/resources/com/example/memorypuzzle/CreateRoom.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/com/example/memorypuzzle/CreateRoom.fxml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/com/example/memorypuzzle/style.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/com/example/memorypuzzle/style.css" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -144,6 +139,14 @@
       <workItem from="1702542589207" duration="626000" />
       <workItem from="1702649071483" duration="2201000" />
       <workItem from="1702658478366" duration="2328000" />
+      <workItem from="1702675704074" duration="1373000" />
+      <workItem from="1702721762447" duration="4909000" />
+      <workItem from="1702739235882" duration="2000" />
+      <workItem from="1702739518643" duration="115000" />
+      <workItem from="1702740118258" duration="1888000" />
+      <workItem from="1702742504382" duration="298000" />
+      <workItem from="1702742869254" duration="378000" />
+      <workItem from="1702743413269" duration="1515000" />
     </task>
     <task id="LOCAL-00001" summary="added Card and Desk of Card">
       <option name="closed" value="true" />
@@ -233,7 +236,23 @@
       <option name="project" value="LOCAL" />
       <updated>1702321014663</updated>
     </task>
-    <option name="localTasksCounter" value="12" />
+    <task id="LOCAL-00012" summary="deleted Client and Server">
+      <option name="closed" value="true" />
+      <created>1702675755956</created>
+      <option name="number" value="00012" />
+      <option name="presentableId" value="LOCAL-00012" />
+      <option name="project" value="LOCAL" />
+      <updated>1702675755956</updated>
+    </task>
+    <task id="LOCAL-00013" summary="added changes">
+      <option name="closed" value="true" />
+      <created>1702675858464</created>
+      <option name="number" value="00013" />
+      <option name="presentableId" value="LOCAL-00013" />
+      <option name="project" value="LOCAL" />
+      <updated>1702675858464</updated>
+    </task>
+    <option name="localTasksCounter" value="14" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -259,9 +278,10 @@
     <MESSAGE value="added the ability to switch between views" />
     <MESSAGE value="added ability to create room" />
     <MESSAGE value="gone game logic for two players" />
-    <MESSAGE value="added changes" />
     <MESSAGE value="added Client and Server" />
-    <option name="LAST_COMMIT_MESSAGE" value="added Client and Server" />
+    <MESSAGE value="deleted Client and Server" />
+    <MESSAGE value="added changes" />
+    <option name="LAST_COMMIT_MESSAGE" value="added changes" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>

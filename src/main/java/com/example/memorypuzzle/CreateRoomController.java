@@ -7,13 +7,13 @@ import javafx.scene.Node;
 import javafx.scene.Parent;
 import javafx.scene.Scene;
 import javafx.scene.control.Button;
-import javafx.scene.control.ChoiceBox;
-import javafx.scene.control.Label;
+import javafx.scene.control.TextField;
 import javafx.stage.Stage;
+import java.io.*;
 
-import java.io.IOException;
 
-public class CreateRoomController {
+
+public class CreateRoomController  {
 
     @FXML
     private Button backButton;
@@ -22,7 +22,7 @@ public class CreateRoomController {
     private Button createRoomButton;
 
     @FXML
-    private Label roomCode;
+    private TextField roomName;
 
     @FXML
     void BackView(ActionEvent event) throws IOException {
@@ -41,5 +41,6 @@ public class CreateRoomController {
         stage.setScene(scene);
         stage.show();
     }
+
 
 }

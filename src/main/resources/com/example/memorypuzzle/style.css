@@ -1,6 +1,6 @@
 .root{
     -fx-font-size: 24pt;
-    -fx-background-color: #F8BBD0;
+    -fx-background-color: #303536;
 }
 
 .label{
@@ -9,5 +9,5 @@
 }
 
 .button{
-    -fx-background-radius: 40px;
+    -fx-background-radius: 30px;
 }
