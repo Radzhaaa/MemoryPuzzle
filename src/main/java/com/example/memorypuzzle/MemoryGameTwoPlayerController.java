@@ -51,6 +51,7 @@ public class MemoryGameTwoPlayerController implements Initializable {
     private Label playerName1;
     @FXML
     private Label playerName2;
+    String name;
 
 
 
@@ -76,7 +77,8 @@ public class MemoryGameTwoPlayerController implements Initializable {
 
     @Override
     public void initialize(URL url, ResourceBundle resourceBundle) {
-        playerName1.setText("");
+        this.name = RoomController.getName();
+        playerName1.setText(this.name);
         initializeImageView();
         playAgain();
     }

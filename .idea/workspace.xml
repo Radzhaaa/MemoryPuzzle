@@ -5,13 +5,13 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="b30a62db-5299-45c0-a676-f0310a4b1c61" name="Changes" comment="">
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/example/memorypuzzle/server/Client.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/example/memorypuzzle/server/Connection.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/example/memorypuzzle/server/Room.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/example/memorypuzzle/server/Server.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/memorypuzzle/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/memorypuzzle/Main.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/com/example/memorypuzzle/MemoryGameTwoPlayerController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/memorypuzzle/MemoryGameTwoPlayerController.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/com/example/memorypuzzle/RoomController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/memorypuzzle/RoomController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/module-info.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/module-info.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/com/example/memorypuzzle/Room.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/com/example/memorypuzzle/Room.fxml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/com/example/memorypuzzle/memory-game-two-player.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/com/example/memorypuzzle/memory-game-two-player.fxml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -149,7 +149,7 @@
       <workItem from="1702821366901" duration="3890000" />
       <workItem from="1702842509772" duration="4075000" />
       <workItem from="1702917604988" duration="4133000" />
-      <workItem from="1702927400549" duration="2100000" />
+      <workItem from="1702927400549" duration="4745000" />
     </task>
     <task id="LOCAL-00001" summary="added Card and Desk of Card">
       <option name="closed" value="true" />
@@ -263,7 +263,15 @@
       <option name="project" value="LOCAL" />
       <updated>1702809114281</updated>
     </task>
-    <option name="localTasksCounter" value="15" />
+    <task id="LOCAL-00015" summary="added function to add name">
+      <option name="closed" value="true" />
+      <created>1702975995973</created>
+      <option name="number" value="00015" />
+      <option name="presentableId" value="LOCAL-00015" />
+      <option name="project" value="LOCAL" />
+      <updated>1702975995973</updated>
+    </task>
+    <option name="localTasksCounter" value="16" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -293,7 +301,8 @@
     <MESSAGE value="deleted Client and Server" />
     <MESSAGE value="added changes" />
     <MESSAGE value="bugs fixed" />
-    <option name="LAST_COMMIT_MESSAGE" value="bugs fixed" />
+    <MESSAGE value="added function to add name" />
+    <option name="LAST_COMMIT_MESSAGE" value="added function to add name" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>

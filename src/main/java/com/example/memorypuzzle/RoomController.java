@@ -27,7 +27,7 @@ public class RoomController implements Initializable {
 
     @FXML
     private Button createRoomButton;
-    String name;
+    static String name;
 
 
 
@@ -78,6 +78,9 @@ public class RoomController implements Initializable {
 
     public void saveName(ActionEvent event) {
         this.name = this.nameTextField.getText();
-//        System.out.println(name);
+    }
+
+    public static String getName() {
+        return name;
     }
 }
