@@ -205,7 +205,7 @@
                 <Label prefWidth="130.0" text="Correct:" GridPane.rowIndex="2" />
                 <Label fx:id="guessesLabel1" text="0" GridPane.columnIndex="1" GridPane.rowIndex="1" />
                 <Label fx:id="correctLabel1" text="0" GridPane.columnIndex="1" GridPane.rowIndex="2" />
-            <Label text="Player 1" />
+            <Label fx:id="playerName1" />
             </GridPane>
             <Button fx:id="playButton" mnemonicParsing="false" onAction="#playAgain" prefHeight="60.0" prefWidth="388.0" text="Play Again" />
          <GridPane prefHeight="100.0" prefWidth="400.0">
@@ -223,7 +223,7 @@
                <Label prefWidth="130.0" text="Correct:" GridPane.rowIndex="2" />
                <Label fx:id="guessesLabel2" text="0" GridPane.columnIndex="1" GridPane.rowIndex="1" />
                <Label fx:id="correctLabel2" text="0" GridPane.columnIndex="1" GridPane.rowIndex="2" />
-               <Label text="Player 2" />
+               <Label fx:id="playerName2" text="Player 2" />
             </children>
          </GridPane>
         </HBox>

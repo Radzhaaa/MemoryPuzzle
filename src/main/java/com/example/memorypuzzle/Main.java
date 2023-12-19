@@ -23,21 +23,7 @@ public class Main extends Application {
         stage.setScene(scene);
         stage.show();
     }
-    public Parent getRoot(){
-        return root;
-    }
 
-    public void setController(MenuController controller){
-        loader.setController(controller);
-    }
-
-    public FXMLLoader getLoader() {
-        return loader;
-    }
-
-    public void setRoot(Parent root) {
-        this.root = root;
-    }
 
     public static void main(String[] args) {
         launch(args);

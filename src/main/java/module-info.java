@@ -3,6 +3,7 @@ module com.example.memorypuzzle {
     requires javafx.fxml;
     requires lombok;
     requires java.logging;
+    requires java.desktop;
 
 
     opens com.example.memorypuzzle to javafx.fxml;

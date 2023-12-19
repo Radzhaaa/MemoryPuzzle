@@ -3,6 +3,7 @@
 <?import javafx.geometry.Insets?>
 <?import javafx.scene.control.Button?>
 <?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TextField?>
 <?import javafx.scene.layout.AnchorPane?>
 <?import javafx.scene.layout.VBox?>
 
@@ -11,8 +12,24 @@
       <VBox alignment="TOP_CENTER" layoutX="167.0" layoutY="23.0" spacing="50.0">
          <children>
             <Label text="Memory Puzzle" />
-            <Button fx:id="connectRoomButton" mnemonicParsing="false" onAction="#ConnectRoom" text="Connect to room" />
-            <Button fx:id="createRoomButton" mnemonicParsing="false" onAction="#createRoom" prefHeight="60.0" prefWidth="261.0" text="Create room" />
+            <Label text="Enter your name">
+               <VBox.margin>
+                  <Insets bottom="5.0" top="-35.0" />
+               </VBox.margin>
+            </Label>
+            <TextField fx:id="nameTextField" prefHeight="60.0" prefWidth="159.0">
+               <VBox.margin>
+                  <Insets top="-50.0" />
+               </VBox.margin>
+            </TextField>
+            <Button fx:id="connectRoomButton" mnemonicParsing="false" onAction="#ConnectRoom" text="Connect to room">
+               <VBox.margin>
+                  <Insets top="-10.0" />
+               </VBox.margin></Button>
+            <Button fx:id="createRoomButton" mnemonicParsing="false" onAction="#createRoom" prefHeight="60.0" prefWidth="261.0" text="Create room">
+               <VBox.margin>
+                  <Insets top="-10.0" />
+               </VBox.margin></Button>
          </children>
       </VBox>
       <Button fx:id="backButton" layoutX="24.0" layoutY="24.0" mnemonicParsing="false" onAction="#BackView" prefHeight="13.0" prefWidth="70.0" style="-fx-background-color: black; -fx-background-radius: 5px; -fx-font-size: 15px;" text="back" textFill="WHITE">
@@ -20,5 +37,6 @@
             <Insets bottom="2.0" left="2.0" right="2.0" top="2.0" />
          </padding>
       </Button>
+      <Button fx:id="nameButton" layoutX="444.0" layoutY="132.0" mnemonicParsing="false" onAction="#saveName" prefHeight="39.0" prefWidth="45.0" style="-fx-background-color: black; -fx-background-radius: 10px; -fx-font-size: 15;" text="ok" textFill="WHITE" />
    </children>
 </AnchorPane>

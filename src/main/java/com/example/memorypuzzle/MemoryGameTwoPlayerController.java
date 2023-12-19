@@ -47,6 +47,13 @@ public class MemoryGameTwoPlayerController implements Initializable {
     @FXML
     private Button playButton;
 
+    @FXML
+    private Label playerName1;
+    @FXML
+    private Label playerName2;
+
+
+
     private MemoryCard card1, card2;
     private int numOfGuesses1;
     private int numOfMatches1;
@@ -66,11 +73,14 @@ public class MemoryGameTwoPlayerController implements Initializable {
         stage.show();
     }
 
+
     @Override
     public void initialize(URL url, ResourceBundle resourceBundle) {
+        playerName1.setText("");
         initializeImageView();
         playAgain();
     }
+
 
     private void initializeImageView() {
         for (int i = 0; i < imagesFlowPane.getChildren().size(); i++) {
@@ -154,6 +164,7 @@ public class MemoryGameTwoPlayerController implements Initializable {
         guessesLabel2.setText(Integer.toString(numOfGuesses2));
 
     }
+
 
     private void checkForMatch() {
         if (card1.isSameCard(card2) & (card1 != card2) && (!card1.isMatched()) && (!card2.isMatched()))  {
