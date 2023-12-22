@@ -78,14 +78,13 @@ public class ServerConnection implements Runnable {
                     id2 = id;
                     MemoryCard card1 = getCardById(id1);
                     MemoryCard card2 = getCardById(id2);
-                    if (card1.match(card2)) {
+                    if (cardMatched(card1, card2)) {
                         matchedCards.add(id1);
                         players.get(currentPlayer).increaseCountMatches();
                         players.get(currentPlayer).increaseCountGuesses();
                         matchedCards.add(id2);
                         flag = true;
                         moveChanged = false;
-                        getPlayerByMove().increaseCountMatches();
                     } else {
                         flag = true;
                         players.get(currentPlayer).increaseCountGuesses();
@@ -103,6 +102,13 @@ public class ServerConnection implements Runnable {
                 id2 = "";
             }
         }
+    }
+
+    private boolean cardMatched(MemoryCard mc1, MemoryCard mc2) {
+        if(Objects.equals(mc1.getFaceName(), mc2.getFaceName())) {
+            return Objects.equals(mc1.getSuit(), mc2.getSuit());
+        }
+        return false;
     }
 
     private MemoryCard getCardById(String id) {
@@ -143,28 +149,33 @@ public class ServerConnection implements Runnable {
         for (int i = 0; i < countOfPlayers; i++) {
             String data = "game:";
 //            data += id + ":";
-            if(matchedCards.isEmpty()) {
-                if(ID2.isEmpty()) {
-                    data += ID1 + ":";
-                }
-                else {
-                    data += ID1 + "," + ID2 + ":";
-                }
-
+            if (!matchedCards.isEmpty()) {
+                data += String.join(",", matchedCards) + ",";
+            }
+            if(ID2.isEmpty()) {
+                data += ID1 + ":";
             }
             else {
-                data += matchedCards.stream().map(Object::toString).collect(Collectors.joining(",")) + ",";
-                if(ID2.isEmpty()) {
-                    data += ID1 + ":";
-                }
-                else {
-                    data += ID1 + "," + ID2 + ":";
-                }
+                data += ID1 + "," + ID2 + ":";
             }
             data += getEndData() + ":";
             data += getPlayersStat(i) + ":";
             data += getPermissionById(i);
             sendData(data, writers.get(i));
+        }
+        if(checkEnd()) {
+            try {
+                closeStreams();
+            } catch (IOException e) {
+                throw new RuntimeException(e);
+            }
+        }
+    }
+
+    private void closeStreams() throws IOException {
+        for(int i = 0; i < countOfPlayers; i++) {
+            writers.get(i).close();
+            readers.get(i).close();
         }
     }
 
@@ -187,7 +198,7 @@ public class ServerConnection implements Runnable {
     }
 
     private String getEndData() {
-        return checkEnd() + "," + getLeader();
+        return checkEnd() + "," + getLeader().getNickname();
     }
 
     private Player getLeader() {

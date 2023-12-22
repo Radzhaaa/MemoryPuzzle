@@ -20,14 +20,14 @@ public class Player {
     public Player(String nickname) {
         this.nickname = nickname;
         id = UUID.randomUUID().toString();
-        count_guesses = 0;
+        count_matches = 0;
         count_guesses = 0;
     }
 
     public Player(String nickname, String id) {
         this.nickname = nickname;
         this.id = id;
-        count_guesses = 0;
+        count_matches = 0;
         count_guesses = 0;
     }
 

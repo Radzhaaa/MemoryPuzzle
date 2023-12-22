@@ -124,8 +124,8 @@ public class ClientHandler {
             boolean endGame = Boolean.parseBoolean(end[0]);
             if (endGame) {
                 openEnd();
-                boolean iWin = Boolean.parseBoolean(end[1]);
-                if (iWin) {
+                String winner = end[1];
+                if (winner.equals(this.username)) {
                     String ending = "Вы победили";
                     ec.setTextState(ending);
                 } else {

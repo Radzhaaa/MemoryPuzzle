@@ -73,7 +73,7 @@ public class MenuController {
             String name = fieldName.getText();
             String s_id = fieldSessionId.getText();
             if (name == null || s_id == null) {
-                System.out.println("Вы не написали имя или айди комнаты. Попробуйте еще раз");
+                System.out.println("Вы не написали имя или id комнаты. Попробуйте еще раз");
             } else {
                 Main.client.joinSession(name, s_id);
             }
@@ -86,7 +86,7 @@ public class MenuController {
                 try {
                     Main.client.createSession(name, session_id);
                 } catch (NumberFormatException ex) {
-                    System.out.println("Неправильный айди комнаты");
+                    System.out.println("Неправильный id комнаты");
                 }
             }
         }
