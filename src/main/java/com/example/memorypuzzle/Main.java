@@ -9,21 +9,23 @@ import javafx.stage.Stage;
 import java.io.IOException;
 
 public class Main extends Application {
-    private FXMLLoader loader = new FXMLLoader(getClass().getResource("Menu.fxml"));
-    private Parent root;
-
-    public Main() throws IOException {
-        root = loader.load();
-    }
+    public static Stage stage;
+    public static Scene scene;
+    public static ClientHandler client;
 
     @Override
-    public void start(Stage stage) throws IOException {
-        Scene scene = new Scene(root);
-        stage.setTitle("Memory Puzzle");
-        stage.setScene(scene);
+    public void start(Stage primaryStage) throws Exception {
+        new Thread(() -> {
+            client = new ClientHandler();
+        }).start();
+        stage = primaryStage;
+        FXMLLoader fxmlLoader = new FXMLLoader(getClass().getResource("multiRoom.fxml"));
+        Parent root = fxmlLoader.load();
+        MenuController controller = fxmlLoader.getController();
+        client.setMenuController(controller);
+        stage.setScene(new Scene(root));
         stage.show();
     }
-
 
     public static void main(String[] args) {
         launch(args);

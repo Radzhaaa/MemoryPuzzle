@@ -8,7 +8,9 @@
 
 <AnchorPane xmlns="http://javafx.com/javafx"
             xmlns:fx="http://javafx.com/fxml"
-            fx:controller="com.example.memorypuzzle.images.TwoPlayer"
+            fx:controller="com.example.memorypuzzle.EndController"
             prefHeight="400.0" prefWidth="600.0">
-
+    <children>
+    <Label fx:id="labelState" layoutX="264.0" layoutY="191.0" text="Вы победили" />
+    </children>
 </AnchorPane>

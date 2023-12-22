@@ -4,16 +4,23 @@ import java.util.ArrayList;
 import java.util.Collections;
 import java.util.List;
 
-public class DeckOfCards {
-    private ArrayList<Card> deck;
+public class DeckOfMemoryCards {
+    private ArrayList<MemoryCard> deck;
+    private int size;
 
-    public DeckOfCards() {
+
+    public DeckOfMemoryCards() {
         this.deck = new ArrayList<>();
+        size = 0;
         List<String> suits = Card.getValidSuits();
         List<String> faceNames = Card.getValidFaceNames();
         for (String suit : suits) {
             for (String faceName : faceNames) {
-                deck.add(new Card(suit, faceName));
+                if(size < 36) {
+                    deck.add(new MemoryCard(suit, faceName));
+                    deck.add(new MemoryCard(suit, faceName));
+                    size += 2;
+                }
             }
         }
     }
@@ -37,7 +44,7 @@ public class DeckOfCards {
         return null;
     }
 
-    public ArrayList<Card> getCards() {
+    public ArrayList<MemoryCard> getCards() {
         return deck;
     }
 

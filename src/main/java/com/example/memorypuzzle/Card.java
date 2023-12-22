@@ -4,6 +4,7 @@ import javafx.scene.image.Image;
 
 import java.util.Arrays;
 import java.util.List;
+import java.util.Objects;
 
 public class Card {
     private String suit;
@@ -48,8 +49,12 @@ public class Card {
         }
     }
 
+    public boolean match(Card cd) {
+        return Objects.equals(this.toString(), cd.toString());
+    }
+
     public String toString() {
-        return faceName + "of" + suit;
+        return suit + "_of_" + faceName;
     }
 
     public String getColour() {

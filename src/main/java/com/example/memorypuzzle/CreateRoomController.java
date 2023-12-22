@@ -35,7 +35,7 @@ public class CreateRoomController  {
 
     @FXML
     void CreateRoom(ActionEvent event) throws IOException {
-        Parent root = FXMLLoader.load(getClass().getResource("memory-game-two-player.fxml"));
+        Parent root = FXMLLoader.load(getClass().getResource("Wait.fxml"));
         Stage stage = (Stage) ((Node) event.getSource()).getScene().getWindow();
         Scene scene = new Scene(root);
         stage.setScene(scene);
