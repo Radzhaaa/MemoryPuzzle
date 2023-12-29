@@ -6,18 +6,13 @@ import javafx.scene.Parent;
 import javafx.scene.Scene;
 import javafx.stage.Stage;
 
-import java.io.IOException;
-
 public class Main extends Application {
     public static Stage stage;
     public static Scene scene;
-    public static ClientHandler client;
-
+    public static Client client;
     @Override
     public void start(Stage primaryStage) throws Exception {
-        new Thread(() -> {
-            client = new ClientHandler();
-        }).start();
+        client = new Client();
         stage = primaryStage;
         FXMLLoader fxmlLoader = new FXMLLoader(getClass().getResource("multiRoom.fxml"));
         Parent root = fxmlLoader.load();

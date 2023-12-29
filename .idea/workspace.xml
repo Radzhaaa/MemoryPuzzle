@@ -5,10 +5,38 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="b30a62db-5299-45c0-a676-f0310a4b1c61" name="Changes" comment="">
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/example/memorypuzzle/delete/DeckOfCards.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/example/memorypuzzle/delete/Game.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/example/memorypuzzle/delete/MemoryGameTwoPlayerController.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/memorypuzzle/ClientHandler.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/memorypuzzle/ClientHandler.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/memorypuzzle/Card.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/memorypuzzle/Card.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/memorypuzzle/ClientHandler.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/memorypuzzle/Client.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/memorypuzzle/ConnectToRoomController.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/memorypuzzle/CreateRoomController.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/memorypuzzle/DeckOfCards.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/memorypuzzle/DeckOfMemoryCards.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/memorypuzzle/DeckOfMemoryCards.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/memorypuzzle/Game.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/memorypuzzle/Game.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/memorypuzzle/GameController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/memorypuzzle/GameController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/memorypuzzle/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/memorypuzzle/Main.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/memorypuzzle/MemoryCard.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/memorypuzzle/MemoryCard.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/memorypuzzle/MemoryGameController.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/memorypuzzle/MemoryGameTwoPlayerController.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/memorypuzzle/MenuController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/memorypuzzle/MenuController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/memorypuzzle/Message.java" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/com/example/memorypuzzle/Player.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/memorypuzzle/Player.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/memorypuzzle/ServerConnection.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/memorypuzzle/ServerConnection.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/memorypuzzle/RoomController.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/memorypuzzle/Server.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/memorypuzzle/Server.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/memorypuzzle/ServerConnection.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/memorypuzzle/Connection.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/memorypuzzle/WaitController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/memorypuzzle/WaitController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/com/example/memorypuzzle/Menu.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/com/example/memorypuzzle/Menu.fxml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/com/example/memorypuzzle/Settings.fxml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/com/example/memorypuzzle/Wait.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/com/example/memorypuzzle/Wait.fxml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/com/example/memorypuzzle/end.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/com/example/memorypuzzle/end.fxml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/com/example/memorypuzzle/game.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/com/example/memorypuzzle/game.fxml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/com/example/memorypuzzle/memory-game-two-player.fxml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/com/example/memorypuzzle/memory-game.fxml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/com/example/memorypuzzle/multiRoom.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/com/example/memorypuzzle/multiRoom.fxml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -20,8 +48,8 @@
       <list>
         <option value="CSS File" />
         <option value="AnnotationType" />
-        <option value="Class" />
         <option value="FxmlFile" />
+        <option value="Class" />
       </list>
     </option>
   </component>
@@ -64,6 +92,7 @@
     &quot;project.structure.last.edited&quot;: &quot;Modules&quot;,
     &quot;project.structure.proportion&quot;: &quot;0.0&quot;,
     &quot;project.structure.side.proportion&quot;: &quot;0.0&quot;,
+    &quot;settings.editor.selected.configurable&quot;: &quot;preferences.pluginManager&quot;,
     &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;
   }
 }</component>
@@ -77,13 +106,14 @@
       <recent name="$PROJECT_DIR$/src/main/resources/com/example/memorypuzzle" />
     </key>
     <key name="MoveFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/src/main/java/com/example/memorypuzzle/delete" />
       <recent name="$PROJECT_DIR$/src/main/resources/com/example/memorypuzzle" />
     </key>
     <key name="MoveClassesOrPackagesDialog.RECENTS_KEY">
       <recent name="com.example.memorypuzzle" />
     </key>
   </component>
-  <component name="RunManager" selected="Application.Main">
+  <component name="RunManager" selected="Application.Server">
     <configuration name="Main" type="Application" factoryName="Application" singleton="false" nameIsGenerated="true">
       <option name="MAIN_CLASS_NAME" value="com.example.memorypuzzle.Main" />
       <module name="MemoryPuzzle" />
@@ -91,16 +121,42 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="Unnamed" type="Application" factoryName="Application" nameIsGenerated="true">
+    <configuration name="Main" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="com.example.memorypuzzle.Main" />
+      <module name="MemoryPuzzle" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="com.example.memorypuzzle.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="Server" type="Application" factoryName="Application" nameIsGenerated="true">
       <option name="MAIN_CLASS_NAME" value="com.example.memorypuzzle.Server" />
       <module name="MemoryPuzzle" />
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
     </configuration>
+    <configuration name="Server" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="com.example.memorypuzzle.Server" />
+      <module name="MemoryPuzzle" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="com.example.memorypuzzle.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
     <list>
+      <item itemvalue="Application.Server" />
       <item itemvalue="Application.Main" />
-      <item itemvalue="Application.Unnamed" />
     </list>
     <recent_temporary>
       <list>
@@ -160,7 +216,16 @@
       <workItem from="1702991229529" duration="3411000" />
       <workItem from="1702997683792" duration="738000" />
       <workItem from="1703083279666" duration="5745000" />
-      <workItem from="1703159103589" duration="29537000" />
+      <workItem from="1703159103589" duration="43402000" />
+      <workItem from="1703339504635" duration="1234000" />
+      <workItem from="1703344028187" duration="13387000" />
+      <workItem from="1703589389862" duration="229000" />
+      <workItem from="1703589691885" duration="1116000" />
+      <workItem from="1703598421104" duration="145000" />
+      <workItem from="1703598626093" duration="2024000" />
+      <workItem from="1703600736382" duration="8604000" />
+      <workItem from="1703609432214" duration="22245000" />
+      <workItem from="1703847392240" duration="491000" />
     </task>
     <task id="LOCAL-00001" summary="added Card and Desk of Card">
       <option name="closed" value="true" />
@@ -298,7 +363,15 @@
       <option name="project" value="LOCAL" />
       <updated>1703272184863</updated>
     </task>
-    <option name="localTasksCounter" value="18" />
+    <task id="LOCAL-00018" summary="game work is finished">
+      <option name="closed" value="true" />
+      <created>1703274143300</created>
+      <option name="number" value="00018" />
+      <option name="presentableId" value="LOCAL-00018" />
+      <option name="project" value="LOCAL" />
+      <updated>1703274143300</updated>
+    </task>
+    <option name="localTasksCounter" value="19" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -330,7 +403,8 @@
     <MESSAGE value="bugs fixed" />
     <MESSAGE value="added function to add name" />
     <MESSAGE value="fixed bags and multiplayer mode" />
-    <option name="LAST_COMMIT_MESSAGE" value="fixed bags and multiplayer mode" />
+    <MESSAGE value="game work is finished" />
+    <option name="LAST_COMMIT_MESSAGE" value="game work is finished" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
@@ -339,16 +413,6 @@
           <properties class="java.lang.NullPointerException" package="java.lang" />
           <option name="timeStamp" value="3" />
         </breakpoint>
-        <line-breakpoint enabled="true" type="java-line">
-          <url>file://$PROJECT_DIR$/src/main/java/com/example/memorypuzzle/ClientHandler.java</url>
-          <line>101</line>
-          <option name="timeStamp" value="15" />
-        </line-breakpoint>
-        <line-breakpoint enabled="true" type="java-line">
-          <url>file://$PROJECT_DIR$/src/main/java/com/example/memorypuzzle/ServerConnection.java</url>
-          <line>80</line>
-          <option name="timeStamp" value="17" />
-        </line-breakpoint>
       </breakpoints>
     </breakpoint-manager>
   </component>

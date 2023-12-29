@@ -1,13 +1,14 @@
 package com.example.memorypuzzle;
 
 import javafx.scene.image.Image;
+import lombok.Getter;
 
 import java.util.Arrays;
 import java.util.List;
-import java.util.Objects;
 
 public class Card {
     private String suit;
+    @Getter
     private String faceName;
 
     public Card(String suit, String faceName) {
@@ -23,10 +24,6 @@ public class Card {
         return Arrays.asList("2", "3", "4", "5", "6", "7", "8", "9", "10", "jack", "queen", "king", "ace");
     }
 
-    public String getSuit() {
-        return suit;
-    }
-
     public void setSuit(String suit) {
         suit = suit.toLowerCase();
         if (getValidSuits().contains(suit)) {
@@ -34,10 +31,6 @@ public class Card {
         } else {
             throw new IllegalArgumentException(suit + "invalid, must be one of " + getValidSuits());
         }
-    }
-
-    public String getFaceName() {
-        return faceName;
     }
 
     public void setFaceName(String faceName) {
@@ -49,26 +42,6 @@ public class Card {
         }
     }
 
-    public boolean match(Card cd) {
-        return Objects.equals(this.toString(), cd.toString());
-    }
-
-    public String toString() {
-        return suit + "_of_" + faceName;
-    }
-
-    public String getColour() {
-        if (suit.equals("hearts") || suit.equals("diamonds")) {
-            return "red";
-        } else {
-            return "black";
-        }
-    }
-
-    public int getValue() {
-        return getValidFaceNames().indexOf(faceName) + 2;
-    }
-
     public Image getImage() {
         String pathName = "images/" + faceName + "_of_" + suit + ".png";
         return new Image(Card.class.getResourceAsStream(pathName));
@@ -76,6 +49,10 @@ public class Card {
 
     public Image getBackOfCardImage(){
         return new Image(Card.class.getResourceAsStream("images/back_of_card.png"));
+    }
+
+    public String toString() {
+        return suit + "_of_" + faceName;
     }
 
 }

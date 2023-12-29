@@ -6,12 +6,11 @@ import java.util.List;
 
 public class DeckOfMemoryCards {
     private ArrayList<MemoryCard> deck;
-    private int size;
 
 
     public DeckOfMemoryCards() {
         this.deck = new ArrayList<>();
-        size = 0;
+        int size = 0;
         List<String> suits = Card.getValidSuits();
         List<String> faceNames = Card.getValidFaceNames();
         for (String suit : suits) {
@@ -23,32 +22,28 @@ public class DeckOfMemoryCards {
                 }
             }
         }
+        shuffle();
     }
+
 
     public void shuffle() {
         Collections.shuffle(deck);
     }
 
-    public Card dealTopCard() {
-        if (!deck.isEmpty()) {
-            return deck.remove(0);
-        } else {
-            return null;
-        }
-    }
-
-    public Card getCard(Card cd) {
-        if(deck.contains(cd)) {
-            return cd;
-        }
-        return null;
-    }
 
     public ArrayList<MemoryCard> getCards() {
         return deck;
     }
 
-    public int getNumberOfCards() {
-        return  deck.size();
+    public MemoryCard getCard(int index){
+        return getCards().get(index);
     }
+
+//    public int getIndex(){
+//        int index = 0;
+//        for(Card card: deck){
+//
+//        }
+//    }
+
 }

@@ -4,37 +4,38 @@ import javafx.application.Platform;
 import javafx.fxml.FXMLLoader;
 import javafx.scene.Parent;
 import javafx.scene.Scene;
+import lombok.Setter;
 
 import java.io.BufferedReader;
 import java.io.IOException;
 import java.io.InputStreamReader;
 import java.io.PrintWriter;
-import java.net.InetAddress;
 import java.net.Socket;
 import java.util.ArrayList;
-import java.util.Objects;
 
-public class ClientHandler {
+public class Client {
     public Socket socket;
-    private BufferedReader in;
-    public PrintWriter out;
+    private BufferedReader bufferedReader;
+    public PrintWriter printWriter;
     public String username;
+    public String roomName;
     public boolean isTurn;
-    private WaitController wc;
-    private GameController gc;
-    private MenuController mc;
-    private EndController ec;
-    private ArrayList<MemoryCard> table;
+    private boolean gameOver = false;
+    @Setter
+    private GameController gameController;
+    @Setter
+    private EndController endController;
+    private WaitController waitController;
+    private ArrayList<MemoryCard> desk;
     private ArrayList<MemoryCard> opened;
-    private int count_guess = 0;
-    private int count_match = 0;
+    private com.example.memorypuzzle.MenuController MenuController;
 
-    public ClientHandler() {
+    public Client() {
         isTurn = false;
         try {
-            socket = new Socket(InetAddress.getLocalHost(), 6666);
-            in = new BufferedReader(new InputStreamReader(socket.getInputStream()));
-            out = new PrintWriter(socket.getOutputStream(), true);
+            socket = new Socket("10.17.76.105", 6666);
+            bufferedReader = new BufferedReader(new InputStreamReader(socket.getInputStream()));
+            printWriter = new PrintWriter(socket.getOutputStream(), true);
         } catch (IOException e) {
             e.printStackTrace();
         }
@@ -49,14 +50,17 @@ public class ClientHandler {
             Platform.runLater(
                     () -> parseData(data)
             );
+            if(gameOver) {
+                break;
+            }
         }
     }
 
-    public void createSession(String name, String s_id) throws NumberFormatException {
+    public void createSession(String name, String room) throws NumberFormatException {
         this.username = name;
-        String data = "create_session" + ":" + name + ":" + s_id;
+        String data = "create_session" + ":" + name + ":" + room;
         sendData(data);
-        System.out.println(s_id);
+        roomName = room;
     }
 
     public void joinSession(String username, String session_id) throws ClassCastException {
@@ -66,13 +70,12 @@ public class ClientHandler {
     }
 
     private void sendData(String data) {
-        this.out.println(data);
-        this.out.flush();
+        this.printWriter.println(data);
     }
 
     private String readData() {
         try {
-            return this.in.readLine();
+            return this.bufferedReader.readLine();
         } catch (IOException ex) {
             System.out.println("Error Occurred in readData in ClientHandler: " + ex.toString());
         }
@@ -100,19 +103,20 @@ public class ClientHandler {
             case "start_game": {
                 // start_game:card1,...:perm:other player nick
                 String[] cards = params[1].split(",");
-                table = new ArrayList<>();
+                desk = new ArrayList<>();
                 for(String str: cards) {
-                    String[] card_info = str.split("_");
-                    table.add(new MemoryCard(card_info[0], card_info[2], card_info[3]));
+                    String[] card_info = str.split("_of_");
+                    desk.add(new MemoryCard(card_info[0], card_info[1]));
                 }
-                gc.setTable(table);
-//                setTableFromData(cards);
+                gameController.setDeck(desk);
+                System.out.println(desk);
+//                setDeskFromData(cards);
                 String other_player = params[3];
-                gc.setPlayerName1(this.username);
-                gc.setPlayerName2(other_player);
-                gc.setImages();
+                gameController.setPlayerName1(this.username);
+                gameController.setPlayerName2(other_player);
+                gameController.setImages();
                 isTurn = Boolean.parseBoolean(params[2]);
-                gc.setDisableActions(isTurn);
+                gameController.setDisableActions(isTurn);
                 break;
             }
             case "game": {
@@ -123,85 +127,46 @@ public class ClientHandler {
             String[] end = params[2].split(",");
             boolean endGame = Boolean.parseBoolean(end[0]);
             if (endGame) {
+                gameOver = true;
                 openEnd();
                 String winner = end[1];
                 if (winner.equals(this.username)) {
                     String ending = "Вы победили";
-                    ec.setTextState(ending);
+                    endController.setTextState(ending);
                 } else {
                     String ending = "Вы проиграли";
-                    ec.setTextState(ending);
+                    endController.setTextState(ending);
                 }
                 closeStreams();
+                break;
             }
             String[] stats = params[3].split(",");
-            gc.setLabels(stats[0], stats[1], stats[2], stats[3]);
+            gameController.setLabels(stats[0], stats[1], stats[2], stats[3]);
             isTurn = Boolean.parseBoolean(params[4]);
-            gc.setImages();
-            gc.setDisableActions(isTurn);
+            gameController.setImages();
+            gameController.setDisableActions(isTurn);
             break;
         }
     }
 
-    private void setTableFromData(String[] data) {
-        table = setCardsFromData(data);
-        gc.setTable(table);
+    private void setOpenedFromData(String[] data) {
+        opened = setCardsFromData(data);
+        gameController.setOpenedCards(opened);
     }
 
     private ArrayList<MemoryCard> setCardsFromData(String[] data) {
-        for (int i = 0; i < data.length; i++) {
-            data[i] = data[i].strip();
-        }
+
         ArrayList<MemoryCard> cards = new ArrayList<>();
-        for (String str : data) {
-            cards.add(getCardById(str));
+        for (String index : data) {
+            MemoryCard c = desk.get(Integer.parseInt(index));
+//            String[] cardName = index.split("_of_");
+//            cards.add(new MemoryCard(cardName[0],cardName[1]));
+            cards.add(c);
         }
         return cards;
     }
 
-    private MemoryCard getCardById(String id) {
-        for (MemoryCard cd : table) {
-            if (Objects.equals(cd.getId(), id)) {
-                return cd;
-            }
-        }
-        return null;
-    }
 
-    private void setOpenedFromData(String[] data) {
-        opened = setCardsFromData(data);
-        gc.setOpenedCards(opened);
-    }
-
-
-    private void openWait() {
-
-        try {
-            FXMLLoader loader = new FXMLLoader(getClass().getResource("Wait.fxml"));
-            Parent root = loader.load();
-
-            WaitController wc = loader.getController();
-            setWaitController(wc);
-
-            Main.stage.close();
-            Main.stage.setTitle("WAITING ROOM");
-            Main.stage.setScene(new Scene(root));
-            Main.stage.show();
-        } catch (IOException e) {
-            e.printStackTrace();
-            System.err.println("error in loading wait");
-        }
-    }
-
-    public void closeStreams() {
-        try {
-            in.close();
-            out.close();
-            socket.close();
-        } catch (IOException e) {
-            throw new RuntimeException(e);
-        }
-    }
 
     private void openGame() {
 
@@ -218,6 +183,25 @@ public class ClientHandler {
         } catch (IOException e) {
             e.printStackTrace();
             System.err.println("error in loading table");
+        }
+    }
+    private void openWait() {
+
+        try {
+            FXMLLoader loader = new FXMLLoader(getClass().getResource("Wait.fxml"));
+            Parent root = loader.load();
+
+            WaitController waitController = loader.getController();
+            setWaitController(waitController);
+            waitController.setRoomNameLabel(roomName);
+
+            Main.stage.close();
+            Main.stage.setTitle("WAITING ROOM");
+            Main.stage.setScene(new Scene(root));
+            Main.stage.show();
+        } catch (IOException e) {
+            e.printStackTrace();
+            System.err.println("error in loading wait");
         }
     }
 
@@ -238,23 +222,34 @@ public class ClientHandler {
         }
     }
 
-    public void sendGameMove(String operation, String id) {
-        sendData(operation + ":" + id);
+
+    public void sendGameMove(String operation, String index) {
+        sendData(operation + ":" + index);
+//        sendData(operation + ":" + card);
     }
 
-    public void setGameController(GameController tc) {
-        this.gc = tc;
+    public void setGameController(GameController gameController) {
+        this.gameController = gameController;
     }
 
-    public void setWaitController(WaitController wc) {
-        this.wc = wc;
+    public void setEndController(EndController endController) {
+        this.endController = endController;
     }
 
-    public void setMenuController(MenuController mc) {
-        this.mc = mc;
+    public void setMenuController(MenuController menuController) {
+        this.MenuController = menuController;
+    }
+    public void setWaitController(WaitController waitController) {
+        this.waitController = waitController;
     }
 
-    public void setEndController(EndController ec) {
-        this.ec = ec;
+    public void closeStreams() {
+        try {
+            bufferedReader.close();
+            printWriter.close();
+            socket.close();
+        } catch (IOException e) {
+            throw new RuntimeException(e);
+        }
     }
 }

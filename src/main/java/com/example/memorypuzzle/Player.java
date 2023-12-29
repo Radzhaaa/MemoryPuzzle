@@ -8,34 +8,34 @@ import java.util.UUID;
 public class Player {
     @Getter
     @Setter
-    private String nickname;
+    private String username;
     @Getter
     @Setter
     private String id;
     @Getter
-    private int count_guesses;
+    private int countOfGuesses;
     @Getter
-    private int count_matches;
+    private int countOfMatches;
 
-    public Player(String nickname) {
-        this.nickname = nickname;
+    public Player(String username) {
+        this.username = username;
         id = UUID.randomUUID().toString();
-        count_matches = 0;
-        count_guesses = 0;
+        countOfMatches = 0;
+        countOfGuesses = 0;
     }
 
-    public Player(String nickname, String id) {
-        this.nickname = nickname;
+    public Player(String username, String id) {
+        this.username = username;
         this.id = id;
-        count_matches = 0;
-        count_guesses = 0;
+        countOfMatches = 0;
+        countOfGuesses = 0;
     }
 
     public void increaseCountGuesses() {
-        count_guesses++;
+        countOfGuesses++;
     }
 
     public void increaseCountMatches() {
-        count_matches++;
+        countOfMatches++;
     }
 }

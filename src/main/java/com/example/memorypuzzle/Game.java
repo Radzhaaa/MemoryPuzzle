@@ -1,34 +1,57 @@
 package com.example.memorypuzzle;
 
+
+import lombok.Getter;
+import lombok.Setter;
+
 import java.util.ArrayList;
-import java.util.Collections;
-import java.util.List;
 
 public class Game {
-    private List<Integer> cards;
+    @Getter
+    private static DeckOfMemoryCards deck;
+    static boolean matched = false;
+    @Getter
+    @Setter
+    static MemoryCard card1 = null;
+    @Getter
+    @Setter
+    static MemoryCard card2 = null;
 
-    public Game() {
-        cards = new ArrayList<>();
+    public static boolean isMatched() {
+        return matched;
     }
 
-    public void initializeGame(int numPairs) {
-        for (int i = 0; i < numPairs; i++) {
-            cards.add(i);
-            cards.add(i);
+
+    public static void startGame() {
+        deck = new DeckOfMemoryCards();
+        deck.shuffle();
+
+    }
+
+    public static boolean end() {
+        for (MemoryCard memoryCard : deck.getCards()) {
+            if (memoryCard.getMatched() == false) {
+                return false;
+            }
         }
-        Collections.shuffle(cards);
+        return true;
     }
 
-    public int getCard(int index) {
-        return cards.get(index);
+    public static ArrayList<Integer> getOpenedCards() {
+        ArrayList<Integer>  opened = new ArrayList<>();
+        for(MemoryCard card: deck.getCards()) {
+            if(card.getMatched()) {
+                opened.add(deck.getCards().indexOf(card));
+            }
+        }
+
+//        ArrayList<MemoryCard> opened = new ArrayList<>();
+//        for (MemoryCard memoryCard : deck.getCards()) {
+//            if (memoryCard.getMatched()) {
+//                opened.add(memoryCard);
+//            }
+//        }
+        return opened;
     }
 
-    public boolean isMatch(int card1, int card2) {
-        return card1 == card2;
-    }
-
-    public int getNumCards() {
-        return cards.size();
-    }
 }
-

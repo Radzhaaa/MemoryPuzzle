@@ -6,12 +6,11 @@ import javafx.scene.control.Label;
 import javafx.scene.image.ImageView;
 import javafx.scene.input.MouseEvent;
 import javafx.scene.layout.FlowPane;
-
+import lombok.Setter;
 import java.util.ArrayList;
-import java.util.concurrent.atomic.AtomicReferenceArray;
+
 
 public class GameController {
-    // fitHeight="100.0" fitWidth="100.0" pickOnBounds="true" preserveRatio="true"
     @FXML
     private FlowPane imagesFlowPane;
     @FXML
@@ -26,15 +25,17 @@ public class GameController {
     private Label playerName1;
     @FXML
     private Label playerName2;
-    private ArrayList<MemoryCard> table = new ArrayList<>();
+    @Setter
+    private ArrayList<MemoryCard> deck = new ArrayList<>();
+    @Setter
     private ArrayList<MemoryCard> openedCards = new ArrayList<>();
 
-    public void setPlayerName1(String nick) {
-        this.playerName1.setText(nick);
+    public void setPlayerName1(String username) {
+        this.playerName1.setText(username);
     }
 
-    public void setPlayerName2(String nick) {
-        this.playerName2.setText(nick);
+    public void setPlayerName2(String username) {
+        this.playerName2.setText(username);
     }
 
     public void setLabels(String match1, String match2, String guess1, String guess2) {
@@ -42,13 +43,6 @@ public class GameController {
         this.guessesLabel2.setText(guess2);
         this.correctLabel1.setText(match1);
         this.correctLabel2.setText(match2);
-    }
-
-    public void setTable(ArrayList<MemoryCard> t) {
-        this.table = t;
-    }
-    public void setOpenedCards(ArrayList<MemoryCard> t) {
-        this.openedCards = t;
     }
 
     public void setDisableActions(boolean flag) {
@@ -59,29 +53,30 @@ public class GameController {
 
     public void setImages() {
         imagesFlowPane.getChildren().clear();
-        for(MemoryCard cd: table) {
-            ImageView iv = new ImageView();
-            if(!openedCards.contains(cd)) {
-                iv.setImage(cd.getBackOfCardImage());
-                iv.setFitWidth(60);
-                iv.setFitHeight(100);
-                iv.setUserData(cd.getId());
-                iv.setOnMouseClicked(this::flip);
+        for(MemoryCard card: deck) {
+            ImageView imageView = new ImageView();
+            if(!openedCards.contains(card)) {
+                imageView.setImage(card.getBackOfCardImage());
+                imageView.setFitWidth(60);
+                imageView.setFitHeight(100);
+                imageView.setUserData(String.valueOf(deck.indexOf(card)));
+                imageView.setOnMouseClicked(this::flip);
             }
             else {
-                iv.setImage(cd.getImage());
-                iv.setFitWidth(60);
-                iv.setFitHeight(100);
-                iv.setDisable(true);
-                iv.setUserData(cd.getId());
+                imageView.setImage(card.getImage());
+                imageView.setFitWidth(60);
+                imageView.setFitHeight(100);
+                imageView.setDisable(true);
+                imageView.setUserData(String.valueOf(deck.indexOf(card)));
             }
-            imagesFlowPane.getChildren().add(iv);
+            imagesFlowPane.getChildren().add(imageView);
         }
     }
 
     private void flip(MouseEvent mouseEvent) {
-        String id = (String) ((Node) mouseEvent.getSource()).getUserData();
-        Main.client.sendGameMove("flip_card", id);
-        System.out.println("отправление карты: " + id);
+        String index = (String) ((Node) mouseEvent.getSource()).getUserData();
+        Main.client.sendGameMove("flip_card", index);
+        System.out.println("отправление карты под индексом: " + index);
     }
+
 }
